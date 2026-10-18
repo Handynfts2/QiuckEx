@@ -138,14 +138,19 @@
       "title": "Escrow Detail",
       "escrowId": "Escrow ID",
       "status": "Status",
-      "unknown": "unknown"
+      "unknown": "unknown",
+      "timing": "Timing",
+      "actions": "Actions",
+      "noTiming": "No timing details were returned.",
+      "actionNote": "These next steps are informational only: the escrow detail endpoint is read-only, and this mobile app does not yet have secure wallet signing for escrow transactions. No release, dispute, refund, or cancellation transaction is submitted from this screen."
     },
     "listing": {
       "title": "Listing Detail",
       "listingId": "Listing ID",
       "sellerId": "Seller ID",
       "unknown": "unknown"
-    }
+    },
+    "analytics": "Analytics"
   },
   "es": {
     "dashboard": "Panel de Control",
@@ -286,14 +291,19 @@
       "title": "Detalle de Fideicomiso",
       "escrowId": "ID de Fideicomiso",
       "status": "Estado",
-      "unknown": "desconocido"
+      "unknown": "desconocido",
+      "timing": "Tiempos",
+      "actions": "Acciones",
+      "noTiming": "No se devolvieron detalles de tiempos.",
+      "actionNote": "Estos pasos siguientes son solo informativos: el endpoint de detalle del escrow es de solo lectura y esta aplicación móvil aún no cuenta con firma segura de billetera para transacciones de escrow. Desde esta pantalla no se envía ninguna transacción de liberación, disputa, reembolso o cancelación."
     },
     "listing": {
       "title": "Detalle de Listado",
       "listingId": "ID de Listado",
       "sellerId": "ID de Vendedor",
       "unknown": "desconocido"
-    }
+    },
+    "analytics": "Analítica"
   },
   "fr": {
     "dashboard": "Tableau de Bord",
@@ -434,13 +444,18 @@
       "title": "Détail du Fiducie",
       "escrowId": "ID de Fiducie",
       "status": "Statut",
-      "unknown": "inconnu"
+      "unknown": "inconnu",
+      "timing": "Calendrier",
+      "actions": "Actions",
+      "noTiming": "Aucun détail de calendrier n'a été renvoyé.",
+      "actionNote": "Ces prochaines étapes sont uniquement informatives : le point de terminaison de détail de la fiducie est en lecture seule, et cette application mobile ne dispose pas encore de la signature sécurisée de portefeuille pour les transactions de fiducie. Aucune transaction de libération, de litige, de remboursement ou d'annulation n'est soumise depuis cet écran."
     },
     "listing": {
       "title": "Détail de l'Annonce",
       "listingId": "ID de l'Annonce",
       "sellerId": "ID du Vendeur",
       "unknown": "inconnu"
-    }
+    },
+    "analytics": "Analytique"
   }
 }

@@ -322,6 +322,24 @@ export class AppConfigService {
     return this.configService.get("HORIZON_URL", { infer: true });
   }
 
+  /**
+   * Timeout in milliseconds for outbound Horizon requests made by HorizonService.
+   */
+  get horizonRequestTimeoutMs(): number {
+    return this.configService.get("HORIZON_REQUEST_TIMEOUT_MS", {
+      infer: true,
+    });
+  }
+
+  /**
+   * Timeout in milliseconds for scam-alerts external blocklist fetches.
+   */
+  get scamAlertsFetchTimeoutMs(): number {
+    return this.configService.get("SCAM_ALERTS_FETCH_TIMEOUT_MS", {
+      infer: true,
+    });
+  }
+
   get sorobanRpcUrl(): string | undefined {
     return this.configService.get("SOROBAN_RPC_URL", { infer: true });
   }
@@ -370,6 +388,16 @@ export class AppConfigService {
    */
   get indexerLagGuardOverride(): boolean {
     return this.configService.get("INDEXER_LAG_GUARD_OVERRIDE", { infer: true });
+  }
+
+  /**
+   * Maximum allowed age of the newest ingestion cursor, in seconds, before the
+   * health check reports the ingestion pipeline as degraded.
+   */
+  get ingestionLagThresholdSeconds(): number {
+    return this.configService.get("INGESTION_LAG_THRESHOLD_SECONDS", {
+      infer: true,
+    });
   }
 
   /**
@@ -560,5 +588,20 @@ export class AppConfigService {
     return this.configService.get('OTEL_EXPORTER_OTLP_ENDPOINT', {
       infer: true,
     });
+  }
+
+  /**
+   * Whether local/dev-only stealth privacy debug endpoints are explicitly enabled (#1215).
+   * Always returns false in production environments regardless of the env var.
+   */
+  get privacyDebugEndpointsEnabled(): boolean {
+    if (this.isProduction || this.environmentName === 'production') {
+      return false;
+    }
+    return Boolean(
+      this.configService.get('PRIVACY_DEBUG_ENDPOINTS_ENABLED', {
+        infer: true,
+      }),
+    );
   }
 }
