@@ -104,6 +104,7 @@ function EscrowContent({
   viewerPublicKey?: string;
   theme: ThemeTokens;
 }) {
+  const { t } = useTranslation();
   const status = getEscrowStatus(detail);
   const statusColor = getStatusColor(status, theme);
   const depositor = detail.depositor || "Not disclosed";
