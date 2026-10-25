@@ -5,8 +5,8 @@ use crate::{
         EVENT_TOPIC_ESCROW, EVENT_TOPIC_PRIVACY,
     },
     storage::{
-        DataKey, PauseFlag, CURRENT_CONTRACT_VERSION, LEGACY_CONTRACT_VERSION,
-        MIN_ADMIN_TRANSFER_DELAY, PRIVACY_ENABLED_KEY, put_escrow,
+        put_escrow, DataKey, PauseFlag, CURRENT_CONTRACT_VERSION, LEGACY_CONTRACT_VERSION,
+        MIN_ADMIN_TRANSFER_DELAY, PRIVACY_ENABLED_KEY,
     },
     EscrowEntry, EscrowStatus, QuickexContract, QuickexContractClient,
 };
